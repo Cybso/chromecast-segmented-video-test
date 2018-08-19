@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>ChromeCast Streaming Test</title>
+		<script type="text/javascript" src="https://www.gstatic.com/cv/js/sender/v1/cast_sender.js"></script>
+		<script src="hello.js"></script>
+	</head>
+	<body>
+		<h1>ChromeCast Streaming Test</h1>
+		<ul>
+			<li><a href="#" onclick="loadMedia('https://dau-sicher.de/cctest/files/BigBuckBunny.mp4', 'video/mp4'); return false;">BigBuckBunny - static file (mp4)</a></li>
+			<li><a href="#" onclick="loadMedia('https://dau-sicher.de/cctest/files/BigBuckBunny.m3u8', 'application/vnd.apple.mpegurl'); return false;">BigBuckBunny - segmented file (m3u8 containing mp4 segments)</a></li>
+		</ul>
+		<div>
+			<button onclick="launchApp()">Launch app</button>
+			<button onclick="stopApp()">Stop app</button>
+		</div>
+		<hr>
+		<h2>Messages</h2>
+		<div id="messages" style="white-space: pre-wrap"></div>
+	</body>
+</html>
